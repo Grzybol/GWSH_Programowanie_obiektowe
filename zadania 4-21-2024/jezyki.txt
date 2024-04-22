@@ -1,0 +1,43 @@
+using System;
+using System.Runtime.ConstrainedExecution;
+
+public class Kata
+{
+    public static bool CheckGreeting(string greetings)
+    {
+        greetings = greetings.ToLower();
+
+        if (greetings.Contains("hello") ||
+            greetings.Contains("ciao") ||
+            greetings.Contains("salut") ||
+            greetings.Contains("hallo") ||
+            greetings.Contains("hola") ||
+            greetings.Contains("ahoj") ||
+            greetings.Contains("czesc"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+
+        Console.WriteLine("Wpisz:");
+        string greeting = Console.ReadLine();
+
+        bool containsGreet = CheckGreeting(greeting);
+
+        if (containsGreet)
+        {
+            Console.WriteLine("Jest przywitanie");
+        }
+        else
+        {
+            Console.WriteLine("Nie ma przywitania");
+        }
+    }
+}
